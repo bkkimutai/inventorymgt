@@ -1,11 +1,10 @@
-package ke.co.safaricom.Models;
+package ke.co.safaricom.Models.user;
 
 import ke.co.safaricom.DB.DB;
 import ke.co.safaricom.DB.DBManagement;
 import org.sql2o.Connection;
 
 import java.util.List;
-import java.util.Objects;
 
 public class User implements DBManagement {
     private String name;

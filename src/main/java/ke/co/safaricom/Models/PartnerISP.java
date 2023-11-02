@@ -55,17 +55,17 @@ public class PartnerISP implements DBManagement {
                     this.getPartnerEmail().equals(newPartnerISP.getPartnerEmail());
         }
     }
-//    @Override
-//    public void save() {
-//        try(Connection con = DB.sql2o.open()) {
-//            String sql = "INSERT INTO partnerISPs (name, description) VALUES (:name, :description)";
-//            this.partnerId = (int) con.createQuery(sql, true)
-//                    .addParameter("name", this.name)
-//                    .addParameter("description", this.description)
-//                    .executeUpdate()
-//                    .getKey();
-//        }
-//    }
+ /*   @Override
+public void save() {
+    try(Connection con = DB.sql2o.open()) {
+             String sql = "INSERT INTO partnerISPs (name, description) VALUES (:name, :description)";
+             this.partnerId = (int) con.createQuery(sql, true)
+                    .addParameter("name", this.name)
+                    .addParameter("description", this.description)
+                    .executeUpdate()
+                    .getKey();
+        }
+    }*/
     @Override
     public void save() {
         try (Connection con = DB.sql2o.beginTransaction()) {

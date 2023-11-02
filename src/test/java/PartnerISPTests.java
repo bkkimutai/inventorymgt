@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PartnerISPTests {
-    private static final Sql2o testSql2o = new Sql2o("jdbc:postgresql://localhost:5432/inventorymgt_test", "postgres", "Msama@012023");
+    private static final Sql2o testSql2o = new Sql2o("jdbc:postgresql://localhost:5433/UserLogin_test", "postgres", "Moraa@2019");
 
     @RegisterExtension
     public static final DatabaseExtension databaseExtension = new DatabaseExtension(testSql2o);

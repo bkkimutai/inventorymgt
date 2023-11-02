@@ -1,5 +1,4 @@
 import ke.co.safaricom.Models.InventoryItem;
-import ke.co.safaricom.Models.User;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.sql2o.Sql2o;
@@ -11,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class InventoryItemTests {
 
-    private static final Sql2o testSql2o = new Sql2o("jdbc:postgresql://localhost:5432/inventorymgt_test", "postgres", "Msama@012023");
+    private static final Sql2o testSql2o = new Sql2o("jdbc:postgresql://localhost:5433/user", "postgres", "Msama@012023");
 
     @RegisterExtension
     public static final DatabaseExtension databaseExtension = new DatabaseExtension(testSql2o);

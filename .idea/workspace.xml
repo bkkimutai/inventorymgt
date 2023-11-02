@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb992631-4d0f-4658-9906-89037979c1b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DbSystemUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DbSystemUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/Admin/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/Admin/SystemUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/login/login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/login/loginDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/controllers/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/controllers/SystemUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/controllers/loginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/admin.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/systemUser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login/login.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/systemUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DBManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DBManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/PartnerISP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/PartnerISP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/InventoryItemTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InventoryItemTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PartnerISPTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PartnerISPTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +84,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "capstone__shell",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/Benjamin Kimutai/Documents/moringa_school_projects/CapstoneProject",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -77,11 +98,86 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ke.co.safaricom.Models.login" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="ke.co.safaricom.Models" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.InventoryItemTests">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ke.co.safaricom.App" />
+      <module name="Inventory_Mgt_system.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ke.co.safaricom.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DbSystemUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ke.co.safaricom.DB.DbSystemUser" />
+      <module name="Inventory_Mgt_system.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ke.co.safaricom.DB.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CapstoneProject [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="InventoryItemTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;InventoryItemTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="PartnerISPTests.all_returnsAllInstancesOfPartnerISPs_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -106,109 +202,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PartnerISPTests.equals_returnsTrueIfNameAndEmailAreSame_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;PartnerISPTests.equals_returnsTrueIfNameAndEmailAreSame_true&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PartnerISPTests.find_returnsISPsWithSameId_secondISP" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;PartnerISPTests.find_returnsISPsWithSameId_secondISP&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PartnerISPTests.save_assignsIdToObject" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;PartnerISPTests.save_assignsIdToObject&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PartnerISPTests.save_insertsObjectIntoDatabase_PartnerISP" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;PartnerISPTests.save_insertsObjectIntoDatabase_PartnerISP&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PartnerISPTests.find_returnsISPsWithSameId_secondISP" />
-        <item itemvalue="Gradle.PartnerISPTests.save_assignsIdToObject" />
+        <item itemvalue="Gradle.InventoryItemTests" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="Gradle.CapstoneProject [dependencies]" />
+        <item itemvalue="Application.DbSystemUser" />
         <item itemvalue="Gradle.PartnerISPTests.all_returnsAllInstancesOfPartnerISPs_true" />
-        <item itemvalue="Gradle.PartnerISPTests.save_insertsObjectIntoDatabase_PartnerISP" />
-        <item itemvalue="Gradle.PartnerISPTests.equals_returnsTrueIfNameAndEmailAreSame_true" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +228,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/UserTests.java</url>
-          <line>28</line>
+          <line>27</line>
           <properties class="UserTests" method="getEmail_userInstantiatesWithEmail_String">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -237,7 +237,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/UserTests.java</url>
-          <line>33</line>
+          <line>32</line>
           <properties class="UserTests" method="equals_returnsTrueIfNameAndEmailAreSame_true">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -246,7 +246,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/UserTests.java</url>
-          <line>63</line>
+          <line>62</line>
           <properties class="UserTests" method="find_returnsUsersWithSameId_secondUser">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -255,7 +255,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/UserTests.java</url>
-          <line>56</line>
+          <line>55</line>
           <properties class="UserTests" method="save_assignsIdToObject">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -264,7 +264,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/InventoryItemTests.java</url>
-          <line>33</line>
+          <line>32</line>
           <properties class="InventoryItemTests" method="equals_returnsTrueIfNameSerialAndManufacturerAreSame_true">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -273,7 +273,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/InventoryItemTests.java</url>
-          <line>39</line>
+          <line>38</line>
           <properties class="InventoryItemTests" method="save_insertsObjectIntoDatabase_User">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -282,7 +282,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/InventoryItemTests.java</url>
-          <line>63</line>
+          <line>62</line>
           <properties class="InventoryItemTests" method="find_returnsItemsWithSameId_secondItem">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -309,7 +309,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/UserTests.java</url>
-          <line>41</line>
+          <line>40</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

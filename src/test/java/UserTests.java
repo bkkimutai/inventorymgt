@@ -1,5 +1,4 @@
-import ke.co.safaricom.Models.User;
-import org.eclipse.jetty.server.Authentication;
+import ke.co.safaricom.Models.user.User;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.sql2o.Sql2o;

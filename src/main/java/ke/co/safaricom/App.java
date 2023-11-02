@@ -7,10 +7,14 @@ import spark.template.handlebars.HandlebarsTemplateEngine;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import ke.co.safaricom.Models.user.User;
+import ke.co.safaricom.Models.login.login;
+
 
 import static spark.Spark.*;
 
 public class App {
+
     public static void main(String[] args) {
         staticFileLocation("/public");
 
