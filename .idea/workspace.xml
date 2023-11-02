@@ -4,30 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb992631-4d0f-4658-9906-89037979c1b6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DbSystemUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DbSystemUsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/Admin/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/Admin/SystemUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/login/login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/login/loginDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/controllers/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/controllers/SystemUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/controllers/loginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/admin.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/systemUser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login/login.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/systemUserTest.java" afterDir="false" />
+    <list default="true" id="eb992631-4d0f-4658-9906-89037979c1b6" name="Changes" comment="added admin to add systemuser and user login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DBManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DBManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/PartnerISP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/PartnerISP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/InventoryItemTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/InventoryItemTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PartnerISPTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PartnerISPTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +42,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -84,7 +67,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "login-and-systemuser",
     "last_opened_file_path": "C:/Users/Benjamin Kimutai/Documents/moringa_school_projects/CapstoneProject",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -221,7 +204,20 @@
       <option name="presentableId" value="Default" />
       <updated>1697563852016</updated>
     </task>
+    <task id="LOCAL-00001" summary="added admin to add systemuser and user login">
+      <option name="closed" value="true" />
+      <created>1698960823760</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698960823760</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added admin to add systemuser and user login" />
+    <option name="LAST_COMMIT_MESSAGE" value="added admin to add systemuser and user login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
