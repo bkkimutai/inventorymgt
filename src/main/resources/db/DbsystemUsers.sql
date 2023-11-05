@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS systemUser(
+CREATE TABLE IF NOT EXISTS systemUserDetails(
     userId int PRIMARY KEY auto_increment,
     firstName VARCHAR,
     lastName VARCHAR,
