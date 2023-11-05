@@ -1,10 +1,13 @@
 package ke.co.safaricom.Models.Admin;
 
 import ke.co.safaricom.DB.DbSystemUser;
-import org.sql2o.Connection;
+//import org.sql2o.Connection;
+import java.sql.*;
 import java.util.Collections;
 import java.util.List;
 import ke.co.safaricom.DB.DbSystemUsers;
+
+import java.sql.DriverManager;
 
 
 public class SystemUser implements DbSystemUser {
@@ -36,7 +39,7 @@ public class SystemUser implements DbSystemUser {
           this.phoneNumber = phoneNumber;
       }
 
-    public void setuserId(int id) {
+    public void setUserId(int id) {
         this.userId = userId;
     }
 
@@ -105,38 +108,29 @@ public class SystemUser implements DbSystemUser {
 
     @Override
     public void save() {
-        try (Connection con = DbSystemUsers.sql2o.beginTransaction()) {
-            String sql = "INSERT INTO systemUser (firstname, lastName, email, company, roles,phoneNumber) VALUES (:firstname, :lastName, :email, :company, :roles, :phoneNumber)";
-            con.createQuery(sql)
-                    .addParameter("firstname", this.firstName)
-                    .addParameter("lastname", this.lastName)
-                    .addParameter("email", this.email)
-                    .addParameter("company", this.company)
-                    .addParameter("roles", this.roles)
-                    .addParameter("phoneNumber", this.phoneNumber)
-                    .executeUpdate();
-            String idQuery = "SELECT lastval()";
-            this.userId = con.createQuery(idQuery).executeScalar(Integer.class);
+        try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
+            String sql = "INSERT INTO systemUser (firstname, lastName, email, company, roles,phoneNumber) VALUES (?,?,?,?,?,?)";
+            PreparedStatement statement =connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            statement.setString(1, this.firstName);
+            statement.setString(2, this.lastName);
+            statement.setString(3, this.email);
+            statement.setString(4, this.company);
+            statement.setString(5, String.join(",", this.roles)); // Assuming roles is a List<String>
+            statement.setString(6, this.phoneNumber);
 
-            con.commit();
-        } catch (Exception exception) {
+            int rowsInserted = statement.executeUpdate();
+
+            if (rowsInserted > 0) {
+                ResultSet generatedKeys = statement.getGeneratedKeys();
+                if (generatedKeys.next()) {
+                    this.userId = generatedKeys.getInt(1);
+                }
+            }
+          connection.commit();
+        } catch (SQLException exception) {
             System.out.println(exception.getMessage());
         }
 
-    }
-    public static List<SystemUser> all () {
-        String sql = "SELECT * FROM systemUser";
-        try (Connection con = DbSystemUsers.sql2o.open()) {
-            return con.createQuery(sql).executeAndFetch(SystemUser.class);
-        }
-    }
-    public static SystemUser find (int userId){
-        try (Connection con = DbSystemUsers.sql2o.open()) {
-            String sql = "SELECT * FROM systemUser where UserId = :Id";
-            return con.createQuery(sql)
-                    .addParameter("userId", userId)
-                    .executeAndFetchFirst(SystemUser.class);
-        }
     }
 
     @Override
@@ -144,7 +138,24 @@ public class SystemUser implements DbSystemUser {
         return false;
     }
 
-}
+    public static List<SystemUser> all () {
+        try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
+            String sql = "SELECT * FROM systemUser";
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return null;
+    }
 
+        public SystemUser find(int userId){
+            try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
+                String sql = "SELECT * FROM systemUser where UserId = :Id";
+                PreparedStatement statement = connection.prepareStatement(sql);
+                statement.setString(1, String.valueOf(this.userId));
 
-
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            return null;
+        }
+    }
