@@ -1,13 +1,11 @@
 package ke.co.safaricom.Models.Admin;
 
 import ke.co.safaricom.DB.DbSystemUser;
-//import org.sql2o.Connection;
 import java.sql.*;
 import java.util.Collections;
 import java.util.List;
-import ke.co.safaricom.DB.DbSystemUsers;
-
 import java.sql.DriverManager;
+import java.sql.Connection;
 
 
 public class SystemUser implements DbSystemUser {
@@ -109,7 +107,7 @@ public class SystemUser implements DbSystemUser {
     @Override
     public void save() {
         try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
-            String sql = "INSERT INTO systemUser (firstname, lastName, email, company, roles,phoneNumber) VALUES (?,?,?,?,?,?)";
+            String sql = "INSERT INTO User (firstname, lastName, email, company, roles,phoneNumber) VALUES (?,?,?,?,?,?)";
             PreparedStatement statement =connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, this.firstName);
             statement.setString(2, this.lastName);
@@ -140,7 +138,7 @@ public class SystemUser implements DbSystemUser {
 
     public static List<SystemUser> all () {
         try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
-            String sql = "SELECT * FROM systemUser";
+            String sql = "SELECT * FROM User";
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -149,7 +147,7 @@ public class SystemUser implements DbSystemUser {
 
         public SystemUser find(int userId){
             try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
-                String sql = "SELECT * FROM systemUser where UserId = :Id";
+                String sql = "SELECT * FROM User where UserId = :Id";
                 PreparedStatement statement = connection.prepareStatement(sql);
                 statement.setString(1, String.valueOf(this.userId));
 
