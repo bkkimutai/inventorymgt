@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb992631-4d0f-4658-9906-89037979c1b6" name="Changes" comment="changed db acess">
+    <list default="true" id="eb992631-4d0f-4658-9906-89037979c1b6" name="Changes" comment="fixed bugs for CRUD">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login/resetPassword.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/Admin/SystemUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/Admin/SystemUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/login/loginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/login/loginDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/controllers/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/controllers/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/DbsystemUsers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/DbsystemUsers.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login/login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login/login.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,10 +184,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CapstoneProject [dependencies]" />
         <item itemvalue="Application.DbSystemUsers" />
         <item itemvalue="Gradle.InventoryItemTests" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Gradle.CapstoneProject [dependencies]" />
         <item itemvalue="Application.DbSystemUser" />
       </list>
     </recent_temporary>
@@ -226,14 +233,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699202090830</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed bugs for CRUD">
+      <option name="closed" value="true" />
+      <created>1699204774501</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699204774501</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added admin to add systemuser and user login" />
     <MESSAGE value="added resource to create table for system users and login" />
     <MESSAGE value="changed db acess" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed db acess" />
+    <MESSAGE value="fixed bugs for CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs for CRUD" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

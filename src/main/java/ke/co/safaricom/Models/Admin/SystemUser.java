@@ -109,12 +109,12 @@ public class SystemUser implements DbSystemUser {
         try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
             String sql = "INSERT INTO User (firstname, lastName, email, company, roles,phoneNumber) VALUES (?,?,?,?,?,?)";
             PreparedStatement statement =connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            statement.setString(1, this.firstName);
-            statement.setString(2, this.lastName);
-            statement.setString(3, this.email);
-            statement.setString(4, this.company);
-            statement.setString(5, String.join(",", this.roles)); // Assuming roles is a List<String>
-            statement.setString(6, this.phoneNumber);
+            statement.setString(2, this.firstName);
+            statement.setString(3, this.lastName);
+            statement.setString(4, this.email);
+            statement.setString(5, this.company);
+            statement.setString(6, String.join(",", this.roles)); // Assuming roles is a List<String>
+            statement.setString(7, this.phoneNumber);
 
             int rowsInserted = statement.executeUpdate();
 

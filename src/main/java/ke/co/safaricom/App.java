@@ -66,6 +66,9 @@ public class App {
             return null;
         }, new HandlebarsTemplateEngine());
 
+        get("/login", (request, response) -> {
+            return new ModelAndView(new HashMap(), "login.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 
 }
