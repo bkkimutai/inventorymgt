@@ -7,8 +7,9 @@ import spark.template.handlebars.HandlebarsTemplateEngine;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import ke.co.safaricom.Models.user.User;
+import ke.co.safaricom.Models.Admin.SystemUser;
 import ke.co.safaricom.Models.login.login;
+import ke.co.safaricom.Models.user.User;
 
 
 import static spark.Spark.*;
@@ -66,6 +67,13 @@ public class App {
             return null;
         }, new HandlebarsTemplateEngine());
 
+        get("/login", (request, response) -> {
+            return new ModelAndView(new HashMap(), "login.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/systemUsers", (request, response) -> {
+            return new ModelAndView(new HashMap(), "systemUser");
+        }, new HandlebarsTemplateEngine());
     }
 
 }

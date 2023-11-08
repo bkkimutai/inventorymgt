@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Registration</title>
-</head>
-<body>
+{{#partial "content"}}
+<div class="container">
     <h2>User Registration Form</h2>
     <form action="/systemUser" method="post">
         <label for="firstname">First Name:</label>
@@ -26,5 +22,7 @@
 
         <input type="submit" value="Register">
     </form>
-</body>
-</html>
+</div>
+{{/partial}}
+{{> "layout.hbs"}}
+

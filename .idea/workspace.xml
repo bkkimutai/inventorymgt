@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb992631-4d0f-4658-9906-89037979c1b6" name="Changes" comment="added resource to create table for system users and login">
+    <list default="true" id="eb992631-4d0f-4658-9906-89037979c1b6" name="Changes" comment="created login route">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/images/safaricom logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DbSystemUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/DB/DbSystemUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/Admin/SystemUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/Models/Admin/SystemUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/DbsystemUsers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/DbsystemUsers.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ke/co/safaricom/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/admin.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/systemUser" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/systemUser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login/login.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login/resetPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/resetPassword.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,23 +69,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;login-and-systemuser&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Benjamin Kimutai/Documents/moringa_school_projects/CapstoneProject&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "login-and-systemuser",
+    "last_opened_file_path": "/Users/lewisngate/CapstoneProject/src/main/resources/public/images",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/public/images" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/public/images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="" />
@@ -92,7 +104,7 @@
       <recent name="ke.co.safaricom.Models" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DbSystemUsers">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ke.co.safaricom.App" />
       <module name="Inventory_Mgt_system.main" />
@@ -180,10 +192,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CapstoneProject [dependencies]" />
         <item itemvalue="Application.DbSystemUsers" />
         <item itemvalue="Gradle.InventoryItemTests" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Gradle.CapstoneProject [dependencies]" />
         <item itemvalue="Application.DbSystemUser" />
       </list>
     </recent_temporary>
@@ -221,13 +233,40 @@
       <option name="project" value="LOCAL" />
       <updated>1699098800340</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed db acess">
+      <option name="closed" value="true" />
+      <created>1699202090830</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699202090830</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fixed bugs for CRUD">
+      <option name="closed" value="true" />
+      <created>1699204774501</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699204774501</updated>
+    </task>
+    <task id="LOCAL-00006" summary="created login route">
+      <option name="closed" value="true" />
+      <created>1699352326583</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699352326583</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added admin to add systemuser and user login" />
     <MESSAGE value="added resource to create table for system users and login" />
-    <option name="LAST_COMMIT_MESSAGE" value="added resource to create table for system users and login" />
+    <MESSAGE value="changed db acess" />
+    <MESSAGE value="fixed bugs for CRUD" />
+    <MESSAGE value="created login route" />
+    <option name="LAST_COMMIT_MESSAGE" value="created login route" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
