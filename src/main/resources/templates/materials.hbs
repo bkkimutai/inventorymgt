@@ -1,0 +1,58 @@
+{{#partial "content"}}
+<section>
+    <div class="col-12_3">
+        <div class="grid-item">
+            <section id="materials-details">
+                <div class="container-full">
+                    <div class="col-1-ng section-header first">
+                        <div class="grid-item">
+                            <h2 class="title">materials movement</h2>
+                        </div>
+                    </div>
+
+                    <div class="col-4-ng">
+                        <div class="grid-item">
+                            <a href="${baseURL}/invoices?status=APPROVED" class="btn-primary full mt-20">&laquo;
+                                Back</a>
+                        </div>
+
+
+                        <form method="POST" action="/materials">
+                            <input type="hidden" name="_csrf" value="${_csrf.token}">
+                            <input type="hidden" name="report-invoice-id" value="${invoice.invoiceId?long?c}">
+                            <input type="hidden" name="report-invoice-uuid" value="${invoice.uuid}">
+                            <div class="grid-item">
+                                <button type="submit" class="btn-primary full mt-20">
+                                    <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;
+                                    Export Approval Trail
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="container-full">
+                    <div class="col-1-ng section-header first">
+                        <div class="grid-item">
+                            <b>${invoice.description}</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3-ng">
+                    &nbsp;
+                </div>
+
+                <div class="col-1-ng mt-30 error-body" style="display: none;">
+                    <div class="grid-item">
+                        <div class="box-notification outline sm error">
+                            <div class="ico-close ico-xxs"></div>
+                            <h6 class="font-weight--semibold">Error</h6>
+                            <p class="sm help-block">Error</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+{{/partial}}
+{{> "layout.hbs"}}
