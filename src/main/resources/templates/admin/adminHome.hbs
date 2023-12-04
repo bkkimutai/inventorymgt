@@ -1,0 +1,44 @@
+{{#block "header"}}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#block "title"}}SAFDBB INVENTORY PORTAL{{/block}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel='stylesheet' href='/css/app.css'>
+</head>
+<body>
+{{/block}}
+<!--begin main template-->
+<ul class="nav nav-tabs">
+    <li role="presentation" class="nav-link"><a href="/admin/home">Home</a></li>
+    <li role="presentation" class="nav-link"><a href="/inventory/new">Register New Inventory</a></li>
+    <li role="presentation" class="nav-link"><a href="/material/new">Register New materials</a></li>
+    <li role="presentation" class="nav-link"><a href="/partnerisps/new">Create a New Partner ISP</a></li>
+    <li role="presentation" class="nav-link"><a href="/user/new">Create a New system user</a></li>
+    <!--    <li class="presentation"><a class="nav-link" href="/isps/all">All Heroes & Squads</a></li>-->
+</ul>
+
+<div class="container">
+    <div class="page-header">
+        <div class="container-fluid">
+            <img src='/public/images/safaricom%20logo.png' class="img-fluid" alt="safaricom logo" style="max-height: 150px;" width="100%">
+        </div>
+        <h1 class="text-center">Inventory management Portal</h1>
+        <h5 class="text-center">The Inventory Registry</h5>
+    </div>
+
+
+    <div class="container">
+        <!--begin main template-->
+        {{#block "content"}}
+        {{/block}}
+    </div>
+</div>
+{{#block "footer"}}
+</body>
+</html>
+{{/block}}

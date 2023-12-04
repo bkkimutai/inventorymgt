@@ -17,7 +17,7 @@ import java.sql.SQLException;
 public class DbSystemUsers {
     public static void main(String[] args) {
 
-        String jdbcURL = "jdbc:postgresql://localhost:5432/systemUser";
+        String jdbcURL = "jdbc:postgresql://localhost:5432/root";
         String username="postgres";
         String password ="Moraa@2019";
 

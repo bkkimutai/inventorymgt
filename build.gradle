@@ -19,7 +19,6 @@ dependencies {
     implementation group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
     implementation 'org.postgresql:postgresql:42.2.27.jre7'
     implementation 'org.postgresql:postgresql:42.2.27.jre7'
-    //implementation 'com.github.jknack:handlebars:4.3.3'
 
 
 }

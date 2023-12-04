@@ -11,7 +11,7 @@ import java.sql.Connection;
 public class SystemUser implements DbSystemUser {
 
     private int userId;
-    private List<String> roles;
+    private String roles;
     private String phoneNumber;
     private String firstName;
     private String lastName;
@@ -33,7 +33,7 @@ public class SystemUser implements DbSystemUser {
           this.lastName = lastName;
           this.email = email;
           this.company = company;
-          this.roles = Collections.singletonList(roles);
+          this.roles = roles;
           this.phoneNumber = phoneNumber;
       }
 
@@ -41,11 +41,11 @@ public class SystemUser implements DbSystemUser {
         this.userId = userId;
     }
 
-    public List<String> getRoles() {
+    public String getRoles() {
         return roles;
     }
 
-    public void setRoles(List<String> roles) {
+    public void setRoles(String roles) {
         this.roles = roles;
     }
 
@@ -88,11 +88,9 @@ public class SystemUser implements DbSystemUser {
     public void setCompany(String company) {
         this.company = company;
     }
-
-
-    /*    public boolean equals(Object otherLoginUser;){
-            if (!(otherLoginUser instanceof SystemUser)) {
-                return false;
+    public boolean equals(Object otherLoginUser){
+          if (!(otherLoginUser instanceof SystemUser)) {
+              return false;
             } else {
                 SystemUser newSystemUser = (SystemUser) otherLoginUser;
                 return this.getFirstName().equals(newSystemUser.getFirstName()) &&
@@ -102,26 +100,26 @@ public class SystemUser implements DbSystemUser {
                         this.getRoles().equals(newSystemUser.getRoles()) &&
                         this.getPhoneNumber().equals(newSystemUser.getPhoneNumber());
             }
-        }*/
+        }
 
     @Override
     public void save() {
-        try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
-            String sql = "INSERT INTO User (firstname, lastName, email, company, roles,phoneNumber) VALUES (?,?,?,?,?,?)";
+        try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/root", "postgres", "Moraa@2019")) {
+            String sql = "INSERT INTO  Table Users (firstname, lastName, email, company, roles,phoneNumber) VALUES (?,?,?,?,?,?)";
             PreparedStatement statement =connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            statement.setString(2, this.firstName);
-            statement.setString(3, this.lastName);
-            statement.setString(4, this.email);
-            statement.setString(5, this.company);
-            statement.setString(6, String.join(",", this.roles)); // Assuming roles is a List<String>
-            statement.setString(7, this.phoneNumber);
+            statement.setString(1, this.firstName);
+            statement.setString(2, this.lastName);
+            statement.setString(3, this.email);
+            statement.setString(4, this.company);
+            statement.setString(5, this.roles);
+            statement.setString(6, this.phoneNumber);
 
             int rowsInserted = statement.executeUpdate();
 
             if (rowsInserted > 0) {
                 ResultSet generatedKeys = statement.getGeneratedKeys();
                 if (generatedKeys.next()) {
-                    this.userId = generatedKeys.getInt(1);
+                    this.userId = generatedKeys.getInt(0);
                 }
             }
           connection.commit();
@@ -137,8 +135,8 @@ public class SystemUser implements DbSystemUser {
     }
 
     public static List<SystemUser> all () {
-        try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
-            String sql = "SELECT * FROM User";
+        try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/root", "postgres", "Moraa@2019")) {
+            String sql = "SELECT * FROM  TABLE Users";
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -146,8 +144,8 @@ public class SystemUser implements DbSystemUser {
     }
 
         public SystemUser find(int userId){
-            try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/systemUser", "postgres", "Moraa@2019")) {
-                String sql = "SELECT * FROM User where UserId = :Id";
+            try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/root", "postgres", "Moraa@2019")) {
+                String sql = "SELECT * FROM TABLE Users where UserId = :Id";
                 PreparedStatement statement = connection.prepareStatement(sql);
                 statement.setString(1, String.valueOf(this.userId));
 
