@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import ke.co.safaricom.Models.Admin.SystemUser;
+import ke.co.safaricom.Models.Admin.materialNew;
+
 import ke.co.safaricom.Models.login.login;
 import ke.co.safaricom.Models.user.User;
 
@@ -17,14 +19,46 @@ import static spark.Spark.*;
 public class App {
 
     public static void main(String[] args) {
-        staticFileLocation("/public");
+       staticFileLocation("/public");
 
-        get("/", (req, res) -> {
+        get("/user/Login", (request, response) -> {
+            Map<String, Object> payload=new HashMap<>();
+            return new ModelAndView(payload, "/login/login.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/admin/Login", (request, response) -> {
+            Map<String, Object> payload=new HashMap<>();
+            return new ModelAndView(payload, "/admin/adminLogin.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/admin/home", (request, response) -> {
+            Map<String, Object> payload=new HashMap<>();
+            return new ModelAndView(payload, "/admin/adminHome.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/", (request, response) -> {
+            Map<String, Object> payload=new HashMap<>();
+            return new ModelAndView(payload, "layout.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/user/new", (request, response) -> {
+            Map<String, Object> payload=new HashMap<>();
+            return new ModelAndView(payload, "/admin/adminSystemUser.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/material/new", (request, response) -> {
+            Map<String, Object> payload = new HashMap<>();
+            return new ModelAndView(payload, "/admin/adminMaterials.hbs");
+        }, new HandlebarsTemplateEngine());
+
+
+        get("/home", (req, res) -> {
             Map<String, Object> payload = new HashMap<>();
             List<ItemWithPartnerISP> InventoryWithISP = ItemWithPartnerISP.getAllInventoryWithISPs();
             payload.put("InventoryWithISP", InventoryWithISP);
-            return new ModelAndView(payload, "index.hbs");
+            return new ModelAndView(payload, "home.hbs");
         }, new HandlebarsTemplateEngine());
+
 
         //show new inventory form
         get("/inventory/new", (request, response) -> {
@@ -32,6 +66,66 @@ public class App {
             List<PartnerISP> partners = PartnerISP.all();
             payload.put("partnerisps", partners);
             return new ModelAndView(payload, "new-item.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        //post new users into DB
+ /*       post("/users", (request, response) -> {
+            Map<String, Object> payload = new HashMap<>();
+            String firstName = request.queryParams("firstName");
+            String lastName = request.queryParams("lastName");
+            String email = request.queryParams("email");
+            String company = request.queryParams("company");
+            String phoneNumber = request.queryParams("phoneNumber");
+            String roles = request.queryParams("roles");
+            int userId = Integer.parseInt(request.queryParams("userId"));
+            SystemUser newUser = new SystemUser(firstName, lastName, email, company, phoneNumber, roles);
+            newUser.save();
+            response.redirect("/admin/home");
+            return null;
+        }, new HandlebarsTemplateEngine());*/
+
+//post new users into DB
+        post("/users", (request, response) -> {
+            Map<String, Object> payload = new HashMap<>();
+            String firstName = request.queryParams("firstName");
+            String lastName = request.queryParams("lastName");
+            String email = request.queryParams("email");
+            String company = request.queryParams("company");
+            String phoneNumber = request.queryParams("phoneNumber");
+            String roles = request.queryParams("roles");
+
+            // Assuming userId is not a required parameter
+            int userId = 0;
+            try {
+                // userId might not be present in the request, so handle the possibility of NumberFormatException
+                String userIdParam = request.queryParams("userId");
+                if (userIdParam != null && !userIdParam.isEmpty()) {
+                    userId = Integer.parseInt(userIdParam);
+                }
+            } catch (NumberFormatException e) {
+                e.printStackTrace(); // Handle or log the exception as needed
+            }
+
+            SystemUser newUser = new SystemUser(firstName, lastName, email, company, phoneNumber, roles);
+            newUser.setUserId(userId); // Set the userId
+
+            newUser.save();
+            response.redirect("/");
+            return null;
+        }, new HandlebarsTemplateEngine());
+
+
+
+//post new materials to DB
+        post("/materials", (request, response) -> {
+            Map<String, Object> payload = new HashMap<>();
+            String itemCode = request.queryParams("firstName");
+            String Description = request.queryParams("lastName");
+            String UOM = request.queryParams("email");
+            materialNew newMaterials = new materialNew(itemCode, Description, UOM);
+            newMaterials.save();
+            response.redirect("/admin/home");
+            return null;
         }, new HandlebarsTemplateEngine());
 
         //Post new Inventory into DB
@@ -67,13 +161,8 @@ public class App {
             return null;
         }, new HandlebarsTemplateEngine());
 
-        get("/login", (request, response) -> {
-            return new ModelAndView(new HashMap(), "login.hbs");
-        }, new HandlebarsTemplateEngine());
 
-        get("/systemUsers", (request, response) -> {
-            return new ModelAndView(new HashMap(), "systemUser");
-        }, new HandlebarsTemplateEngine());
+
     }
 
 }

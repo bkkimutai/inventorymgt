@@ -4,7 +4,7 @@
     {{#if partnerisps}}
 
         <div class="container">
-            <form action="/inventories" method="post">
+            <form action="/inventory/new" method="post">
                 <div class="form-group">
                     <label for="heroName">Inventory Name:</label>
                     <input type="text" class="form-control" id="itemName" aria-describedby="emailHelp" placeholder="Enter Inventory name" name="itemName" required >
@@ -39,4 +39,4 @@
         <h3 class="text-center text-info"><i class="fas fa-info"></i>  You'll need to create partner ISP before you add an Inventory <br><br> <a class="btn btn-outline-primary" href="/partnerisps/new">Create A New Partner ISP here </a> </h3>
     {{/if}}
 {{/partial}}
-{{> "layout.hbs"}}
+{{> "admin/adminHome.hbs"}}

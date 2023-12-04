@@ -1,0 +1,29 @@
+{{#partial "content"}}
+
+    <div class="container">
+<h2> Add new material item</h2>
+<div class="container">
+    <form action="/material/new" method="post">
+        <div class="form-materials">
+            <label>itemcode</label>
+            <input type="text" class="form-control" id="itemcode", aria-describedby=" " placeholder="Enter itemcode" name="itemcode" required>
+        </div>
+        <div class="form-materials">
+            <label>Description</label>
+            <input type="text" class="form-control" id="Description", aria-describedby=" " placeholder="Enter Description" name="Description" required>
+        </div>
+        <div class="form-materials">
+            <label>UOM</label>
+            <select id="UOM" name="UOM" required>
+                <option value="metre">Metre</option>
+                <option value="piece">piece</option>
+            </select>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Save new material</button>
+
+    </form>
+</div>
+    </div>
+{{/partial}}
+{{> "admin/adminHome.hbs"}}

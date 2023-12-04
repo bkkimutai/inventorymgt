@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import ke.co.safaricom.Models.Admin.SystemUser;
 import ke.co.safaricom.Models.Admin.*;
 
-@WebServlet("/systemUser")
+@WebServlet("/adminSystemUser")
 public class SystemUserController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
