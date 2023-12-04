@@ -11,7 +11,7 @@ import java.sql.Connection;
 public class SystemUser implements DbSystemUser {
 
     private int userId;
-    private List<String> roles;
+    private String roles;
     private String phoneNumber;
     private String firstName;
     private String lastName;
@@ -33,7 +33,7 @@ public class SystemUser implements DbSystemUser {
           this.lastName = lastName;
           this.email = email;
           this.company = company;
-          this.roles = Collections.singletonList(roles);
+          this.roles = roles;
           this.phoneNumber = phoneNumber;
       }
 
@@ -41,11 +41,11 @@ public class SystemUser implements DbSystemUser {
         this.userId = userId;
     }
 
-    public List<String> getRoles() {
+    public String getRoles() {
         return roles;
     }
 
-    public void setRoles(List<String> roles) {
+    public void setRoles(String roles) {
         this.roles = roles;
     }
 
@@ -111,7 +111,7 @@ public class SystemUser implements DbSystemUser {
             statement.setString(2, this.lastName);
             statement.setString(3, this.email);
             statement.setString(4, this.company);
-            statement.setString(5, String.join(",", this.roles)); // Assuming roles is a List<String>
+            statement.setString(5, this.roles);
             statement.setString(6, this.phoneNumber);
 
             int rowsInserted = statement.executeUpdate();
