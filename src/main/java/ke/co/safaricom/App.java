@@ -26,6 +26,16 @@ public class App {
             return new ModelAndView(payload, "/login/login.hbs");
         }, new HandlebarsTemplateEngine());
 
+        post("/user/Login", (request, response) -> {
+            Map<String, Object> payload = new HashMap<>();
+            String email = request.queryParams("email");
+            String password = request.queryParams("password");
+            login newlogin = new login(email, password);
+            newlogin.save();
+            response.redirect("/");
+            return null;
+        }, new HandlebarsTemplateEngine());
+
         get("/admin/Login", (request, response) -> {
             Map<String, Object> payload=new HashMap<>();
             return new ModelAndView(payload, "/admin/adminLogin.hbs");
