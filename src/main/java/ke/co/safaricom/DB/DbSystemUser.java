@@ -7,4 +7,5 @@ public interface DbSystemUser {
 
     boolean equals(Object otherUser);
 
+    boolean isValidUser(String email, String password);
 }

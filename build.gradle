@@ -19,6 +19,9 @@ dependencies {
     implementation group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
     implementation 'org.postgresql:postgresql:42.2.27.jre7'
     implementation 'org.postgresql:postgresql:42.2.27.jre7'
+    // https://mvnrepository.com/artifact/com.sparkjava/spark-template-velocity
+    implementation group: 'com.sparkjava', name: 'spark-template-velocity', version: '1.0'
+
 
 
 }

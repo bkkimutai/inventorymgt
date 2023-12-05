@@ -10,8 +10,8 @@ import java.util.Map;
 import ke.co.safaricom.Models.Admin.SystemUser;
 import ke.co.safaricom.Models.Admin.materialNew;
 
+
 import ke.co.safaricom.Models.login.login;
-import ke.co.safaricom.Models.user.User;
 
 
 import static spark.Spark.*;
@@ -26,11 +26,16 @@ public class App {
             return new ModelAndView(payload, "/login/login.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/decom", (request, response) -> {
+            Map<String, Object> payload=new HashMap<>();
+            return new ModelAndView(payload, "/decom.hbs");
+        }, new HandlebarsTemplateEngine());
+
         post("/user/Login", (request, response) -> {
             Map<String, Object> payload = new HashMap<>();
             String email = request.queryParams("email");
             String password = request.queryParams("password");
-            login newlogin = new login(email, password);
+            login newlogin = new login();
             newlogin.save();
             response.redirect("/");
             return null;
