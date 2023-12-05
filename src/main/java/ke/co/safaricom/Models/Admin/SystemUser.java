@@ -103,6 +103,11 @@ public class SystemUser implements DbSystemUser {
         }
 
     @Override
+    public boolean isValidUser(String email, String password) {
+        return false;
+    }
+
+    @Override
     public void save() {
         try (java.sql.Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/root", "postgres", "Moraa@2019")) {
             String sql = "INSERT INTO  Table Users (firstname, lastName, email, company, roles,phoneNumber) VALUES (?,?,?,?,?,?)";
